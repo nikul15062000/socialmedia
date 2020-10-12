@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <Button
+        android:id="@+id/back_text"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="Add Text"
+        android:fontFamily="@font/muliregular"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#000000"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_done_black_24dp" />
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp" />
+
+    </FrameLayout>
+
+    <!--Size-->
+
+    <!--Pattern-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="100dp"
+        android:layout_marginBottom="180dp">
+
+        <FrameLayout
+            android:id="@+id/seekbarframe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Size"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <com.robertlevonyan.views.chip.Chip
+                android:id="@+id/seekbar_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Done"
+                android:textSize="20dp"
+                app:mcv_backgroundColor="#ffffff"
+                app:mcv_strokeSize="1dp"
+                app:mcv_strokeColor="#2962FF"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_pattren"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="180dp"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Pattern"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <com.robertlevonyan.views.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_gravity="end"
+            android:text="Done"
+            android:id="@+id/pattren_done"
+            android:textSize="20dp"
+            app:mcv_backgroundColor="#ffffff"
+            app:mcv_strokeSize="1dp"
+            app:mcv_strokeColor="#2962FF"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp" />
+
+        <GridView
+            android:id="@+id/grid_pattern"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:horizontalSpacing="30dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp" />
+
+    </FrameLayout>
+
+    <!--Blur-->
+    <FrameLayout
+        android:id="@+id/frame_blur"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="180dp"
+        android:layout_gravity="bottom"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Blur"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+
+        <com.robertlevonyan.views.chip.Chip
+            android:id="@+id/blurdone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:layout_gravity="end"
+            android:textSize="20dp"
+            app:mcv_backgroundColor="#ffffff"
+            app:mcv_strokeSize="1dp"
+            app:mcv_strokeColor="#2962FF"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/noblur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="No blur"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/innerblur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Inner blur"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/normalblur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Normal blur"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/outerblur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Outer blur"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/solidblur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Solid blur"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </RadioGroup>
+
+
+    </FrameLayout>
+
+    <!--Font Style-->
+    <FrameLayout
+        android:id="@+id/frame_fontstyle"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="180dp"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Font Style"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <com.robertlevonyan.views.chip.Chip
+            android:id="@+id/fontstyle_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:layout_gravity="end"
+            android:textSize="20dp"
+            app:mcv_backgroundColor="#ffffff"
+            app:mcv_strokeSize="1dp"
+            app:mcv_strokeColor="#2962FF"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <GridView
+            android:id="@+id/grid_fontstyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:horizontalSpacing="30dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp" />
+
+
+    </FrameLayout>
+
+    <!--Color-->
+    <FrameLayout
+        android:id="@+id/frame_color"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="180dp"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Color"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <com.robertlevonyan.views.chip.Chip
+            android:id="@+id/colordone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310dp"
+            android:text="Done"
+            android:layout_gravity="end"
+            android:textSize="20dp"
+            app:mcv_backgroundColor="#ffffff"
+            app:mcv_strokeSize="1dp"
+            app:mcv_strokeColor="#2962FF"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp" />
+
+        <GridView
+            android:id="@+id/grid_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:numColumns="7"
+            android:padding="5dp"
+            android:verticalSpacing="10dp" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="90dp"
+        android:layout_marginTop="460dp"
+        android:gravity="center"
+        android:background="#FFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/text"
+                android:onClick="open"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_add_text"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ADD TEXT" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/size"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_text_size"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SIZE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/liner_color"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_color"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="COLOR" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:background="#FFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/liner_style"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_style"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="STYLE" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/pattern"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_pattern"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PATTERN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/liner_blur"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/btn_alignment"
+                android:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BLUR" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

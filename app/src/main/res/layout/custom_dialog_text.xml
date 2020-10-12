@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="200dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="0dp">
+
+    <EditText
+        android:id="@+id/alert_edittext"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:background="#e0e0d1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Add your text here..." />
+
+    <Button
+        android:id="@+id/alert_done"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/btn_text_done" />
+</FrameLayout>
